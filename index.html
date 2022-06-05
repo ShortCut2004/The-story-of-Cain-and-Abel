@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css" />
+    <title>קין והבל - הטרגדיה</title>
+    <link rel="shortcut icon" href="photos/icon.ico">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <img id = "logo" src="photos/logo.png">
+        <div id = "sidebar-stuff">
+			<a class="openbtn" onclick="openNav()">☰</a>
+            <a href="https://www.minecraft.net/ru-ru"><img href="https://www.minecraft.net/ru-ru" class="golem" src="photos/golem.png" onmouseenter="this.src ='photos/golem.gif';" onmouseout="this.src = 'photos/golem-reversed.gif';" title="support"></a>
+        </div>
+        <h5 class="online"></h5>
+        <div class="title">
+            <h1 class="title">קין והבל - הטרגדיה</h1>
+        </div>
+    </header>
+    <!-- SCRIPT -->
+    <script>
+        function openNav() {
+            document.getElementById("main-sidebar").style.width = "400px";
+            document.getElementById("main").style.marginLeft = "400px";
+        }
+
+        function copy() {
+            alert("Copied!");
+        }
+
+        function closeNav() {
+            document.getElementById("main-sidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        function show_hide_Languages() {
+            var x = document.getElementById("Languages");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            }
+            else {
+                x.style.display = "block";
+            }
+        }
+
+        function CopyToClipboard(id) {
+            var r = document.createRange();
+            r.selectNode(document.getElementById(id));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+        }
+
+        function currency_show() {
+            document.getElementById("currency_list").classList.remove("hide");
+            document.getElementById("currency_list").classList.add("show");
+        }
+
+        function currency_hide() {
+            document.getElementById("currency_list").classList.remove("show");
+            document.getElementById("currency_list").classList.add("hide");
+        }
+
+        function currency_change() {
+            document.getElementById("currencies").innerHTML = "hi";
+        }
+    </script>
+    <!-- SIDEBAR -->
+    <div id="main-sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#" class="Ban-list">#</a>
+    </div>
+    <div id="main">
+    </div>
+    <!-- CENTER DIV -->
+    <div class="center" style="height:auto" id="div_center">
+        <img class ="pp" id="img1" src="photos/1.png">
+        <img class ="pp" id="img2" src="photos/2.png">
+        <img class ="pp" id="img3" src="photos/3.png">
+        <img class ="pp" id="img4" src="photos/4.png">
+        <img class ="pp" id="img5" src="photos/5.png">
+        <img class ="pp" id="img6" src="photos/6.png">
+        <img class ="pp" id="img7" src="photos/7.png">
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-div">
+        <p class="Copyright">
+            Copyright © 2020 -
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+        </p>
+        <p class="Contact_us">
+            Contact us
+            <a href="#" style="visibility:hidden;">
+                <i class="fab fa-discord" style="font-size:20px;color:#bfbfbf;visibility:visible;margin-left:2px;"></i>
+            </a>
+            <a href="#" style="visibility:hidden;">
+                <i class="fa fa-vk" style="font-size:25px;color:#bfbfbf;visibility:visible;margin-left:2px;"></i>
+            </a>
+            <a href="#" style="visibility:hidden;">
+                <i class="fa fa-instagram" style="font-size:25px;color:#bfbfbf;visibility:visible;margin-left:2px;"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-google" style="font-size:25px;color:#bfbfbf;margin-left:2px;"></i>
+            </a>
+        </p>
+        </div>
+    </footer>
+</body>
+</html>
